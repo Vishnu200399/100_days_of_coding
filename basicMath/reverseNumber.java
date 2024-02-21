@@ -3,7 +3,7 @@ package basicMath;
 public class reverseNumber {
 
   
-    public void ReverseNumber(int N)
+    public static int ReverseNumber(int N)
     {
         int num = N;
         int reverse = 0;
@@ -13,21 +13,11 @@ public class reverseNumber {
             reverse = reverse*10+digit;
             N = N/10;
         }
-        
-        if(num == reverse){
-            System.out.println("The number is a palindrome");
-        }
-        else{
-            System.out.println("The number is not a palindrome");
-        }
-        // return reverse;
+        return reverse;
         
     }
     public static void main(String[] args) {
-        reverseNumber obj = new reverseNumber();
-        obj.ReverseNumber(1213);
-        // System.out.println("The reverse of the:");
+        System.out.println("The reverse of the:"+ReverseNumber(123));
       }
-
    
 }
